@@ -16,8 +16,14 @@
   }
 }
 
+@font-face {
+  font-family: 'Calligraphy';
+  src: url('./calligraffitti.ttf') format('truetype');
+}
+
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: 'Calligraphy' sans-serif;
   background: linear-gradient(
       to bottom,
       transparent,
