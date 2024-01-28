@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'Calligraphy';
-  src: url('./calligraffitti.ttf') format('truetype');
+  src: url('calligraffitti.ttf') format('truetype');
 }
 
 body {
