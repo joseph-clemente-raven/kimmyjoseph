@@ -1,9 +1,10 @@
 import type {Metadata}
 from 'next'
-import {Inter} from 'next/font/google'
+import {Calligraffitti, Inter} from 'next/font/google'
 import './globals.css'
+import Link from 'next/link';
 
-const inter = Inter({subsets: ['latin']})
+const inter = Inter({weight: '400', preload: false});
 
 export const metadata : Metadata = {
     title: 'Create Next App',
@@ -16,13 +17,13 @@ export default function RootLayout({children} : {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <main className='min-h-screen w-full bg-white'>
+                <main style={{minHeight: '100vh', width: '100%', background: "#eee"}}>
                     <nav className="fixed top-0 w-full bg-transparent z-50 p-4">
                         <div className="flex justify-center p-4">
-                            <a href="#" className="hover:text-gray-800 mx-4">Home</a>
-                            <a href="#" className="hover:text-gray-800 mx-4">Our Story</a>
-                            <a href="#" className="hover:text-gray-800 mx-4">Wedding Details</a>
-                            <a href="#" className="hover:text-gray-800 mx-4">RSVP</a>
+                            <Link href="/" className="hover:text-gray-800 mx-4">Home</Link>
+                            <Link href="/ourstory" className="hover:text-gray-800 mx-4">Our Story</Link>
+                            <Link href="/wedding" className="hover:text-gray-800 mx-4">Wedding Details</Link>
+                            <Link href="/photos" className="hover:text-gray-800 mx-4">Photos</Link>
                         </div>
                     </nav>
                     {children}
